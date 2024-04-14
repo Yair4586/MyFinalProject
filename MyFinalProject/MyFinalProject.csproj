@@ -132,6 +132,9 @@
     <Content Include="LoginAdmin.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="managerPage.aspx" />
+    <Content Include="Page1.aspx" />
+    <Content Include="Page2.aspx" />
+    <Content Include="Page3.aspx" />
     <Content Include="pics\Back.png" />
     <Content Include="Project.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -289,6 +292,27 @@
     </Compile>
     <Compile Include="MyMP.Master.designer.cs">
       <DependentUpon>MyMP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.aspx.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page1.aspx.designer.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page2.aspx.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page2.aspx.designer.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page3.aspx.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page3.aspx.designer.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Project.aspx.cs">
       <DependentUpon>Project.aspx</DependentUpon>

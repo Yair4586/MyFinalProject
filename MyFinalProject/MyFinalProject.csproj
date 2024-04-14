@@ -136,6 +136,10 @@
     <Content Include="Page2.aspx" />
     <Content Include="Page3.aspx" />
     <Content Include="pics\Back.png" />
+    <Content Include="pics\hatoof.jpg" />
+    <Content Include="pics\kfar azza.png" />
+    <Content Include="pics\kibuts erez.jpg" />
+    <Content Include="pics\nir oz.png" />
     <Content Include="Project.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

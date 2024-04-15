@@ -96,7 +96,6 @@
         <tr>
             <td class="mpMenu">
                 [<a href="Final.aspx">home page</a>]
-                [<a href="Project.aspx">Project</a>]
                 [<a href="Game.aspx">Game</a>]
             </td>
         </tr>

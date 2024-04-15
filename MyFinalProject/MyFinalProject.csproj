@@ -137,10 +137,17 @@
     <Content Include="Page3.aspx" />
     <Content Include="pics\Back.png" />
     <Content Include="pics\hatoof.jpg" />
+    <Content Include="pics\hatoof2.png" />
+    <Content Include="pics\hatoof3.png" />
+    <Content Include="pics\kasman.png" />
     <Content Include="pics\kfar azza.png" />
+    <Content Include="pics\kfar azza2.png" />
     <Content Include="pics\kibuts erez.jpg" />
+    <Content Include="pics\malcodet1.png" />
+    <Content Include="pics\malcodet2.png" />
+    <Content Include="pics\malcodet3.png" />
+    <Content Include="pics\malcodet4.png" />
     <Content Include="pics\nir oz.png" />
-    <Content Include="Project.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -317,13 +324,6 @@
     </Compile>
     <Compile Include="Page3.aspx.designer.cs">
       <DependentUpon>Page3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Project.aspx.cs">
-      <DependentUpon>Project.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Project.aspx.designer.cs">
-      <DependentUpon>Project.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowTable.aspx.cs">

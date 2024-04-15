@@ -112,6 +112,15 @@
                 <h3 class="mpH3">
                     האתר נוצר ע"י יאיר לביא
                 </h3>
+                <table>
+                    <tr>
+                        <td style="width: 30%;"></td>
+                        <td style="width: 60%;">
+                            <a href ="mailto:yair.lavie2008@gmail.com">צור קשר - יאיר לביא</a>
+                        </td>
+                        <td style="width: 30%; direction: ltr;"><%=Application["counter"] %> מונה מבקרים באתר :</td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>

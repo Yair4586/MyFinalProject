@@ -4,13 +4,14 @@
         .tableDB {border: 1px solid black; margin: 0px auto;}
         .tblTH {text-align: center; border: 1px solid black;}
         .tblTD1 {border: 1px solid black; text-align: center;}
-        .tblTD2 {border: 1px solid black; }
-        .tblTD3 {border: 1px solid black; text-align: right;}
+        .tblTD2 {border: 1px solid black; text-align: right;}
+        .tblTD3 {border: 1px solid black; text-align: left;}
     </style>
     <script>
         function detectField() {
             if (document.getElementById("field").value == "gender") {
-                document.getElementById("query").innerHTML = "<input type ='radio' name ='value' value='male' checked='checked' />זכר" +
+                document.getElementById("query").innerHTML =
+                    "<input type ='radio' name ='value' value='male' checked='checked' />זכר" +
                     "<input type ='radio' name ='value' value='female' />נקבה";
 
             }

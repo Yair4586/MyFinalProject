@@ -400,7 +400,7 @@
                 <td>
                     <table style ="width: 550px;">
                         <tr>
-                            <td class="cbHob"><input type="checkbox" name="hobby" value="1"/>Computers</td>
+                            <td class="cbHob"><input type="checkbox" name="hobby" value="1" checked="checked"/>Computers</td>
                             <td class="cbHob"><input type="checkbox" name="hobby" value="2"/>Music</td>
                             <td class="cbHob"><input type="checkbox" name="hobby" value="3"/>Movies</td>
                             <td class="cbHob"><input type="checkbox" name="hobby" value="4"/>TV</td>
@@ -433,7 +433,9 @@
             
         </table>
     </form>
-<%=st %>
+    <table border="1" align="center" dir="ltr">
+        <%=st %>
+    </table>
 
-    
+
 </asp:Content>

@@ -24,9 +24,7 @@ namespace MyFinalProject
 
             int length = table.Rows.Count;
             if (length == 0)
-            {
                 msg = "אין נרשמים";
-            }
             else
             {
                 st += "<tr>";

@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMP.Master" AutoEventWireup="true" CodeBehind="ComplexQuery.aspx.cs" Inherits="MyFinalProject.ComplexQuery" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+    .tableDB {border: 1px solid black; margin: 0px auto;}
+    .tblTH {text-align: center; border: 1px solid black;}
+    .tblTD1 {border: 1px solid black; text-align: center;}
+    .tblTD2 {border: 1px solid black; text-align: right;}
+    .tblTD3 {border: 1px solid black; text-align: left;}
+</style>
     <script>
         function detectField1() {
             if (document.getElementById("field1").value == "gender") {
@@ -8,7 +15,7 @@
                     "<input type='radio' name='value1' value='female' />נקבה";
             }
             else {
-                if (document.getElementById("field1").value == "yearBorn" || 
+                if (document.getElementById("field1").value == "yearBorn" ||
                     document.getElementById("field1").value == "yearTo") {
                     var yearStr = "<select name='value'><option value='0'>בחר שנה</option>";
                     var currYear = new Date().getFullYear();
@@ -59,8 +66,9 @@
                             document.getElementById("query1").innerHTML = "<input type='text' name='value1'  />";
                         }
                     }
+                }
+            }
         }
-
         function detectField2() {
             if (document.getElementById("field2").value == "gender") {
                 document.getElementById("query2").innerHTML =
@@ -119,12 +127,15 @@
                             document.getElementById("query2").innerHTML = "<input type='text' name='value2'  />";
                         }
                     }
+                }
+            }
         }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <center>
-    <form id="Form1" methid="post" = runat="server">
+    <form id="Form1" method="post" runat ="server" align="center">
+
         <table border="1">
             <tr>
                 <td style="width: 20px;">
@@ -178,4 +189,12 @@
         </table>
     </form>
     </center>
+        <h2 dir = "ltr" align="center">
+        <%=sql %>
+
+    </h2>
+        <table style="border: 1px solid black; margin: 0px auto">
+    <%=st %>
+</table>
+<h3 align="center"><%= msg %></h3>
 </asp:Content>

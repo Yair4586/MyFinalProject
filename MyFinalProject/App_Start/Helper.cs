@@ -26,7 +26,7 @@ public class Helper
         return conn;
 	}
 
-    public static  void DoQuery(string fileName, string sql)
+    public static void DoQuery(string fileName, string sql)
     {
         SqlConnection conn = ConnectToDb(fileName);
         conn.Open();

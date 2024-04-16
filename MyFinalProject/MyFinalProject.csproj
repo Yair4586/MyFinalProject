@@ -149,6 +149,10 @@
     <Content Include="pics\malcodet3.png" />
     <Content Include="pics\malcodet4.png" />
     <Content Include="pics\nir oz.png" />
+    <Content Include="pics\survay\blue.png" />
+    <Content Include="pics\survay\green.png" />
+    <Content Include="pics\survay\red.png" />
+    <Content Include="pics\survay\yellow.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

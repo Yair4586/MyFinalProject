@@ -14,6 +14,11 @@ namespace MyFinalProject
         void Application_Start(object sender, EventArgs e)
         {
             Application["counter"] = 0;
+
+            Application["q1"] = 0;
+            Application["q2"] = 0;
+            Application["q3"] = 0;
+            Application["q4"] = 0;
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
@@ -22,12 +27,14 @@ namespace MyFinalProject
         {
             Session["uName"] = "אורח";
             Session["userFName"] = "אורח";
+            Session["voted"] = false;
             Session["admin"] = "no";
         }
         void Session_End(object sender, EventArgs e)
         {
             Session["uName"] = "אורח";
             Session["fName"] = "אורח";
+            Session["voted"] = false;
             Session["admin"] = "no";
         }
     }

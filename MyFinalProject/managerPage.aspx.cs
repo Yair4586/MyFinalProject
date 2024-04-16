@@ -24,6 +24,7 @@ namespace MyFinalProject
             {
                 msg = "<h3><a href = 'ShowTable.aspx'>[הצגת הטבלה]</a></h3> ";
                 msg += "<h3><a href = 'SimpleQuery.aspx'>[שאילתה פשוטה]</a></h3> ";
+                msg += "<h3><a href = 'complexQuery.aspx'>[שאילתה מורכבת]</a></h3>";
             }
         }
     }

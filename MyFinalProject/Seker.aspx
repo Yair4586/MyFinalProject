@@ -16,7 +16,7 @@
 <table class="tableOut">
     <tr>
         <td>
-            <form runrat="server">
+            <form id="form1" method="post">
                 <table class="tableIn" border="1">
                     <tr><th style="text-align: center;" colspan ="2">שאלת הסקר</th></tr>
                     <tr>

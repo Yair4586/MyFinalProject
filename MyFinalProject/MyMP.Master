@@ -51,6 +51,7 @@
         .clock {
             text-align:center;
             color: black;
+            font-family: 'Comic Sans MS' 
         }
     </style>
     <script>
@@ -81,7 +82,7 @@
                         <td style="width: 200px;">
                             <%=loginMsg %>
                         </td>
-                        <td style="width: 90%;">
+                        <td style="width: 80%;">
                             <h1 class="mpH1" id="top">כותרת האתר
                             </h1>
                         </td>
@@ -119,7 +120,11 @@
                         <td style="width: 60%;">
                             <a href ="mailto:yair.lavie2008@gmail.com">צור קשר - יאיר לביא</a>
                         </td>
-                        <td style="width: 30%; direction: ltr;"><%=Application["counter"] %> מונה מבקרים באתר :</td>
+                        <td style="width: 30%; direction: ltr;">
+                            <%Application["counter"] = (int)Application["counter"] + 1; %>
+                            <%=Application["counter"] %> מונה מבקרים באתר :
+                        </td>
+           
                     </tr>
                 </table>
             </td>

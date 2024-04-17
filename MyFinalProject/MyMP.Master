@@ -100,6 +100,7 @@
                 [<a href="Game.aspx">Game</a>]
                 [<a href="Gallery.aspx">Gallery</a>]
                 [<a href="Seker.aspx">Seker</a>]
+                [<a href="LoginAdmin.aspx">LoginAdmin</a>]
             </td>
         </tr>
         <tr>

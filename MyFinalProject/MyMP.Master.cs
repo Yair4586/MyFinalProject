@@ -21,7 +21,6 @@ namespace MyFinalProject
             {
                 loginMsg += "[<a href = 'Form_Signup.aspx'>הרשם</a>] <br />";
                 loginMsg += "[<a href = 'Login.aspx'>התחבר</a>]";
-                loginMsg += "[<a href = 'LoginAdmin.aspx'>כניסת מנהל</a>]";
                 //menuStr = menu + manegStr;
             }
             else

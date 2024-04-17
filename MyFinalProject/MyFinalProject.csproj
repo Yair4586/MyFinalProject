@@ -137,6 +137,8 @@
     <Content Include="Page2.aspx" />
     <Content Include="Page3.aspx" />
     <Content Include="pics\Back.png" />
+    <Content Include="pics\game\map.png" />
+    <Content Include="pics\game\redPawn.png" />
     <Content Include="pics\hatoof.jpg" />
     <Content Include="pics\hatoof2.png" />
     <Content Include="pics\hatoof3.png" />
@@ -153,6 +155,7 @@
     <Content Include="pics\survay\green.png" />
     <Content Include="pics\survay\red.png" />
     <Content Include="pics\survay\yellow.png" />
+    <Content Include="pics\war.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

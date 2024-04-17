@@ -61,6 +61,10 @@ namespace MyFinalProject
                          yearList += "<option value='" + i + "'>" + i + "</option>";
                 }
             }
+            if (Request.Form["submit"] != null)
+            {
+
+            }
         }
     }
 }

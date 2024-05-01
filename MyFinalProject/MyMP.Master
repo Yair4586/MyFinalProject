@@ -40,9 +40,10 @@
             border: 1px solid silver;
         }
         .mpH1{
-            color:red;
             text-align:center;
-            font-family:'Guttman Yad-Brush'
+            width: 100px;
+            height: 30px;
+            
         }
         .mpH3{
             color:navy;
@@ -52,6 +53,10 @@
             text-align:center;
             color: black;
             font-family: 'Comic Sans MS' 
+        }
+        .menuPics{
+            width: 100px;
+            height: 30px;
         }
     </style>
     <script>
@@ -64,6 +69,9 @@
             var t2 = d.toLocaleTimeString();
             var t = t1 + "<br />" + t2;
             document.getElementById("myClock").innerHTML = t;
+        }
+        function showIcon(icName, icPic) {
+            icName.src = icPic
         }
     </script>
 
@@ -83,8 +91,7 @@
                             <%=loginMsg %>
                         </td>
                         <td style="width: 80%;">
-                            <h1 class="mpH1" id="top">כותרת האתר
-                            </h1>
+                            <img src="pics/menu/home1.png" style="width:550px; height:150px"/>
                         </td>
                         <td style="width: 200px;">
                             <h3 class ="clock" id="myClock"></h3>
@@ -96,11 +103,11 @@
         </tr>
         <tr>
             <td class="mpMenu">
-                [<a href="Final.aspx">home page</a>]
-                [<a href="Game.aspx">Game</a>]
-                [<a href="Gallery.aspx">Gallery</a>]
-                [<a href="Seker.aspx">Seker</a>]
-                [<a href="LoginAdmin.aspx">LoginAdmin</a>]
+                <a href="Final.aspx"><img src="pics/menu/homePage1.png" class="menuPics" id="home" onmouseover ="showIcon(home, 'pics/menu/homepPage2.png')" onmouseout="showIcon(home, 'pics/menu/homePage1.png')"/></a>
+                <a href="Game.aspx"><img src="pics/menu/game1.png" class="menuPics" id="game" onmouseover ="showIcon(game, 'pics/menu/game2.png')" onmouseout="showIcon(game, 'pics/menu/game1.png')"/></a>
+                <a href="Gallery.aspx"><img src="pics/menu/galery1.png" class="menuPics" id="gallery" onmouseover ="showIcon(gallery, 'pics/menu/galery2.png')" onmouseout="showIcon(gallery, 'pics/menu/galery1.png')"/></a>
+                <a href="Seker.aspx"><img src="pics/menu/seker1.png" class="menuPics" id="seker" onmouseover ="showIcon(seker, 'pics/menu/seker2.png')" onmouseout="showIcon(seker, 'pics/menu/seker1.png')"/></a>
+                <a href="LoginAdmin.aspx"><img src="pics/menu/adminLogin1.png" class="menuPics" id="adminLogin" onmouseover ="showIcon(adminLogin, 'pics/menu/adminLogin2.png')" onmouseout="showIcon(adminLogin, 'pics/menu/adminLogin1.png')"/></a>
             </td>
         </tr>
         <tr>

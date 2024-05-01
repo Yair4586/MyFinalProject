@@ -86,41 +86,36 @@ namespace MyFinalProject
                     sqlInsert += hob2 + "' , '" + hob3 + "' , '" + hob4 + "' , '" + hob5 + "' , '" + password + "')";
 
                     Helper.DoQuery(fileName, sqlInsert);
-                    msg = "sucsses";
+                    msg = "sucsess";
                     Response.Redirect("Final.aspx");
+
+                    st += "<tr><td>user name: </td><td>" + uName + "</td></tr>";
+                    st += "<tr><td>first name: </td><td>" + fName + "</td></tr>";
+                    st += "<tr><td>last name: </td><td>" + lName + "</td></tr>";
+                    st += "<tr><td>email: </td><td>" + email + "</td></tr>";
+                    st += "<tr><td>gender: </td><td>" + gender + "</td></tr>";
+                    st += "<tr><td>YearBorn: </td><td>" + yearBorn + "</td></tr>";
+                    st += "<tr><td>phone: </td><td align= 'center' >" + prefix + " - " + phone + "</td></tr>";
+                    st += "<tr><td>city: </td><td>" + city + "</td></tr>";
+                    st += "<tr><td>password: </td><td>" + password + "</td></tr>";
+
+                    st += "<tr><td>hobbies: </td><td>";
+                    if (hob1 == 'T')
+                        st += "computers, ";
+                    if (hob2 == 'T')
+                        st += "Music, ";
+                    if (hob3 == 'T')
+                        st += "Movies, ";
+                    if (hob4 == 'T')
+                        st += "TV, ";
+                    if (hob5 == 'T')
+                        st += "Horses, ";
+
+                    st += "</td></tr>";
+
+                    st += "</table>";
                 }
                 
-                
-                
-                
-                
-                
-
-                st += "<tr><td>user name: </td><td>" + uName + "</td></tr>";
-                st += "<tr><td>first name: </td><td>" + fName + "</td></tr>";
-                st += "<tr><td>last name: </td><td>" + lName + "</td></tr>";
-                st += "<tr><td>email: </td><td>" + email + "</td></tr>";
-                st += "<tr><td>gender: </td><td>" + gender + "</td></tr>";
-                st += "<tr><td>YearBorn: </td><td>" + yearBorn + "</td></tr>";
-                st += "<tr><td>phone: </td><td align= 'center' >" + prefix + " - " + phone + "</td></tr>";
-                st += "<tr><td>city: </td><td>" + city + "</td></tr>";
-                st += "<tr><td>password: </td><td>" + password + "</td></tr>";
-
-                st += "<tr><td>hobbies: </td><td>";
-                if (hob1 == 'T')
-                    st += "computers, ";
-                if (hob2 == 'T')
-                    st += "Music, ";
-                if (hob3 == 'T')
-                    st += "Movies, ";
-                if (hob4 == 'T')
-                    st += "TV, ";
-                if (hob5 == 'T')
-                    st += "Horses, ";
-
-                st += "</td></tr>";
-
-                st += "</table>";
             }
         }
     }

@@ -430,11 +430,6 @@
                     <input type="submit" name="submit" value="  שלח  " onclick="chkForm"/>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" style="text-align: center;"> 
-                    <input type="submit" name="submit" value=" עדכן " />
-                </td>
-            </tr>
         </table>
     </form>
     <table border="1" align="center" dir="ltr">

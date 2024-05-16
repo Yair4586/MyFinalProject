@@ -130,7 +130,6 @@
                             <a href ="mailto:yair.lavie2008@gmail.com">צור קשר - יאיר לביא</a>
                         </td>
                         <td style="width: 30%; direction: ltr;">
-                            <%Application["counter"] = (int)Application["counter"] + 1; %>
                             <%=Application["counter"] %> מונה מבקרים באתר :
                         </td>
            

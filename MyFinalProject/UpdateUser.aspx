@@ -4,6 +4,12 @@
         .cdHob{
             width: 100px;
         }
+        table{
+            margin: 0px auto;
+        }
+        h1{
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

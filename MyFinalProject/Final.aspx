@@ -17,6 +17,9 @@
         height:5px;
         width:300px;
     }
+    .more{
+        font-size:30px;
+    }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,7 +41,7 @@
  בקיבוץ כפר עזה נרצחו כ־72 איש. לאחר שכוחות צה"ל הגיעו למקום התנהלו קרבות ממושכים, ביום הראשון והשני להתקפה, מול כעשרה מחבלים שחדרו לקיבוץ. חלק מתושבי הקיבוץ היו נצורים בבתיהם עד למחרת.
 </p>
 
-<a href="Page1.aspx">קרא עוד...</a>
+<a href="Page1.aspx" class="more">קרא עוד...</a>
 
 <div style=" text-align:center;">
     <img src="pics/kfar azza.png" style=" width: 30%;" />
@@ -56,7 +59,7 @@
     253 אנשים מישראל נחטפו בידי המחבלים לתוך רצועת עזה. על פי הערכות, הם מוחזקים בעיקר בדרום רצועת עזה, שבשליטת חמאס. רוב החטופים הם אזרחים, כולל קשישים וילדים. 35 מהחטופים הם עובדים זרים (רובם מתאילנד) ותיירים. בנוסף, לחלק מהישראלים החטופים ישנה אזרחות כפולה ממספר מדינות, בהן: ארגנטינה, ארצות הברית, צרפת, גרמניה, רוסיה ואיטליה. עד אפריל 2024, שבו לישראל 112 חטופים חיים וחולצו 12 גופות. נקבע מותם של 34 מתוך 129 החטופים שנותרו ברצועה.
 </p>
 
-<a href="Page2.aspx">קרא עוד...</a>
+<a href="Page2.aspx" class="more">קרא עוד...</a>
 
 <div style=" text-align:center;">
     <img src="pics/hatoof.jpg" style=" width: 30%;"/>
@@ -78,7 +81,7 @@
 
 </p>
 
-<a href="Page3.aspx">קרא עוד...</a>
+<a href="Page3.aspx" class="more">קרא עוד...</a>
     
 <div style=" text-align:center;">
     <img src="pics/malcodet4.png" style=" width: 30%;"/>

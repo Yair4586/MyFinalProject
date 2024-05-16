@@ -88,7 +88,27 @@
                 <table>
                     <tr>
                         <td style="width: 200px;">
-                            <%=loginMsg %>
+                              <%=loginMsg %>
+
+  <% if (Session["fName"].ToString() == "אורח")
+  {%>
+      [<a href = 'Form_Signup.aspx'>הרשם</a>] <br />
+      [<a href = 'Login.aspx'>התחבר</a>]
+<%}
+  else
+  { %>
+      <%if(Session["admin"].ToString() == "yes")
+      {%>
+          <a href = 'managerPage.aspx'>דף מנהל</a> <br />
+          <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
+      <%}
+      else
+      {%>
+          <a href = 'UpdateUser.aspx'><img src="pics/menu/update1.png" class="menuPics" id="update" onmouseover ="showIcon(update, 'pics/menu/update2.png')" onmouseout="showIcon(update, 'pics/menu/update1.png')"/></a> <br />
+          <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
+      <%}%>
+    
+  <%}%>
                         </td>
                         <td style="width: 80%;">
                             <img src="pics/menu/home1.png" style="width:550px; height:150px"/>

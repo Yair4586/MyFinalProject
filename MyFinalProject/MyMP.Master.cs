@@ -16,27 +16,6 @@ namespace MyFinalProject
             loginMsg = "<h3>שלום ";
             loginMsg += Session["fName"].ToString();
             loginMsg += "</h3>";
-
-            if (Session["fName"].ToString() == "אורח")
-            {
-                loginMsg += "[<a href = 'Form_Signup.aspx'>הרשם</a>] <br />";
-                loginMsg += "[<a href = 'Login.aspx'>התחבר</a>]";
-                //menuStr = menu + manegStr;
-            }
-            else
-            {
-                if(Session["admin"].ToString() == "yes")
-                {
-                    loginMsg += "[<a href = 'managerPage.aspx'>דף מנהל</a>] <br />";
-                    loginMsg += "[<a href = 'Logout.aspx'>התנתק</a>]";
-                }
-                else
-                {
-                    loginMsg += "[<a href = 'UpdateUser.aspx'>עדכון פרטים</a>] <br />";
-                    loginMsg += "[<a href = 'Logout.aspx'>התנתק</a>]";
-                }
-                
-            }
         }
     }
 }

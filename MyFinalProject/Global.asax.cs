@@ -26,7 +26,7 @@ namespace MyFinalProject
         void Session_start(object sender, EventArgs e)
         {
             Session["uName"] = "אורח";
-            Session["userFName"] = "אורח";
+            Session["fName"] = "אורח";
             Session["voted"] = false;
             Session["admin"] = "no";
         }

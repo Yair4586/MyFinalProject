@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMP.Master" AutoEventWireup="true" CodeBehind="Gallery.aspx.cs" Inherits="MyFinalProject.Gallery" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        
         .imgCell{
             width: 120px;
             height: 120px;

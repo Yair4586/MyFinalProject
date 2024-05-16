@@ -14,10 +14,10 @@ namespace MyFinalProject
         protected void Page_Load(object sender, EventArgs e)
         {
             loginMsg = "<h3>שלום ";
-            loginMsg += Session["uName"].ToString();
+            loginMsg += Session["fName"].ToString();
             loginMsg += "</h3>";
 
-            if (Session["uName"].ToString() == "אורח")
+            if (Session["fName"].ToString() == "אורח")
             {
                 loginMsg += "[<a href = 'Form_Signup.aspx'>הרשם</a>] <br />";
                 loginMsg += "[<a href = 'Login.aspx'>התחבר</a>]";

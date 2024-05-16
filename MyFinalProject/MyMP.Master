@@ -107,7 +107,7 @@
                 <a href="Game.aspx"><img src="pics/menu/game1.png" class="menuPics" id="game" onmouseover ="showIcon(game, 'pics/menu/game2.png')" onmouseout="showIcon(game, 'pics/menu/game1.png')"/></a>
                 <a href="Gallery.aspx"><img src="pics/menu/galery1.png" class="menuPics" id="gallery" onmouseover ="showIcon(gallery, 'pics/menu/galery2.png')" onmouseout="showIcon(gallery, 'pics/menu/galery1.png')"/></a>
                 <a href="Seker.aspx"><img src="pics/menu/seker1.png" class="menuPics" id="seker" onmouseover ="showIcon(seker, 'pics/menu/seker2.png')" onmouseout="showIcon(seker, 'pics/menu/seker1.png')"/></a>
-                <a href="LoginAdmin.aspx"><img src="pics/menu/adminLogin1.png" class="menuPics" id="adminLogin" onmouseover ="showIcon(adminLogin, 'pics/menu/adminLogin2.png')" onmouseout="showIcon(adminLogin, 'pics/menu/adminLogin1.png')"/></a>
+                <a href="LoginAdmin.aspx"><img src="pics/menu/adminLogin1.png" class="menuPics" id="adminLogin" onmouseover ="showIcon(adminLogin, 'pics/menu/adminLogin3.png')" onmouseout="showIcon(adminLogin, 'pics/menu/adminLogin1.png')"/></a>
             </td>
         </tr>
         <tr>

@@ -163,6 +163,8 @@
     <Content Include="pics\menu\adminLogin1.png" />
     <Content Include="pics\menu\logout1.png" />
     <Content Include="pics\menu\logout2.png" />
+    <Content Include="pics\menu\login2.png" />
+    <Content Include="pics\menu\login1.png" />
     <Content Include="pics\menu\update2.png" />
     <Content Include="pics\menu\update1.png" />
     <Content Include="pics\menu\seker1.png" />

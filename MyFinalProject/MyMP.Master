@@ -90,25 +90,25 @@
                         <td style="width: 200px;">
                               <%=loginMsg %>
 
-  <% if (Session["fName"].ToString() == "אורח")
-  {%>
-      [<a href = 'Form_Signup.aspx'>הרשם</a>] <br />
-      [<a href = 'Login.aspx'>התחבר</a>]
-<%}
-  else
-  { %>
-      <%if(Session["admin"].ToString() == "yes")
-      {%>
-          <a href = 'managerPage.aspx'>דף מנהל</a> <br />
-          <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
-      <%}
-      else
-      {%>
-          <a href = 'UpdateUser.aspx'><img src="pics/menu/update1.png" class="menuPics" id="update" onmouseover ="showIcon(update, 'pics/menu/update2.png')" onmouseout="showIcon(update, 'pics/menu/update1.png')"/></a> <br />
-          <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
-      <%}%>
+                              <% if (Session["fName"].ToString() == "אורח")
+                                {%>
+                                    [<a href = 'Form_Signup.aspx'>הרשם</a>] <br />
+                                    <a href = 'Login.aspx'><img src="pics/menu/login1.png" class="menuPics" id="login" onmouseover ="showIcon(login, 'pics/menu/login2.png')" onmouseout="showIcon(login, 'pics/menu/login1.png')"/></a>
+                              <%}
+                                else
+                                { %>
+                                    <%if(Session["admin"].ToString() == "yes")
+                                    {%>
+                                        <a href = 'managerPage.aspx'>דף מנהל</a> <br />
+                                        <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout1" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
+                                    <%}
+                                    else
+                                    {%>
+                                        <a href = 'UpdateUser.aspx'><img src="pics/menu/update1.png" class="menuPics" id="update" onmouseover ="showIcon(update, 'pics/menu/update2.png')" onmouseout="showIcon(update, 'pics/menu/update1.png')"/></a> <br />
+                                        <a href = 'Logout.aspx'><img src="pics/menu/logout1.png" class="menuPics" id="logout2" onmouseover ="showIcon(logout, 'pics/menu/logout2.png')" onmouseout="showIcon(logout, 'pics/menu/logout1.png')"/></a>
+                                    <%}%>
     
-  <%}%>
+                                <%}%>
                         </td>
                         <td style="width: 80%;">
                             <img src="pics/menu/home1.png" style="width:550px; height:150px"/>

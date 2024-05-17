@@ -21,6 +21,32 @@
         font-size:30px;
     }
 </style>
+    <script>
+    var Back1 = "pics/Back1.png";
+    var Back2 = "pics/Back2.png";
+    var Back3 = "pics/Back3.png";
+
+    setInterval("start()", 300);
+
+    function show(str) {
+        pic1.src = str;
+        pic2.src = str;
+        pic3.src = str;
+    }
+
+    var i = 1;
+
+    function start() {
+        j = i % 4;
+
+        switch (j) {
+            case 0: show(Back1); break;
+            case 1: show(Back2); break;
+            case 2: show(Back3); break;
+        }
+        i++;
+    }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
             <h1 class="Header">the war effect on nearby people</h1>
@@ -49,7 +75,7 @@
 
 <div style="text-align: center;">
     <a href="#top">
-       <img src="pics/Back.png" style="width: 100px;" />
+       <img src="pics/Back1.png" id="pic1" alt="Back" style="width: 50px"/>
     </a>
 </div>
 
@@ -69,7 +95,7 @@
 
 <div style="text-align: center;">
     <a href="#top">
-        <img src="pics/Back.png" style="width: 100px;" />
+        <img src="pics/Back1.png" id="pic2" alt="Back" style="width: 50px"/>
     </a>
 </div>
 
@@ -91,7 +117,7 @@
 
 <div style="text-align: center;">
     <a href="#top">
-        <img src="pics/Back.png" style="width: 100px;" />
+        <img src="pics/Back1.png" id="pic3" alt="Back" style="width: 50px"/>
     </a>
 </div>
 

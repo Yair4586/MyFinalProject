@@ -20,7 +20,7 @@ namespace MyFinalProject
             {
                 msg = "<div style='text-HorizontalAlign: center;'>";
                 msg += "<h3>אינך מנהל, אין לך הרשאות לצפות בדף זה </h3>";
-                msg += "<a hfef='first.aspx'>[המשך]</a>";
+                msg += "<a href='final.aspx'>[המשך]</a>";
                 msg += "</div>";
             }
             else

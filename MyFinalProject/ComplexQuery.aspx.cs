@@ -29,8 +29,14 @@ namespace MyFinalProject
             string tableName = "usersTbl";
 
             string qry1 = "", qry2 = "";
-
-            if(value1 != null)
+            if (Session["admin"].ToString() == "no")
+            {
+                msg = "<div style='text-HorizontalAlign: center;'>";
+                msg += "<h3>אינך מנהל, אין לך הרשאות לצפות בדף זה </h3>";
+                msg += "<a href='final.aspx'>[המשך]</a>";
+                msg += "</div>";
+            }
+            else if (value1 != null)
             {
                 if (field1 == "gender" || field1 == "prefix")
                     qry1 = field1 + " = '" + value1 + "'";

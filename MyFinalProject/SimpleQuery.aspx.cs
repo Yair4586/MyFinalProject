@@ -16,7 +16,7 @@ namespace MyFinalProject
    
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sqlSelect = "";
+            string sqlSelect;
             string field = Request.Form["field"];
             string value = Request.Form["value"];
 
@@ -55,7 +55,15 @@ namespace MyFinalProject
                 }
             }
             sql = sqlSelect;
-            if (Request.Form["submit"] != null)
+
+            if (Session["admin"].ToString() == "no")
+            {
+                msg = "<div style='text-HorizontalAlign: center;'>";
+                msg += "<h3>אינך מנהל, אין לך הרשאות לצפות בדף זה </h3>";
+                msg += "<a href='final.aspx'>[המשך]</a>";
+                msg += "</div>";
+            }
+            else if (Request.Form["submit"] != null)
             {
                 DataTable table = Helper.ExecuteDataTable(fileName, sqlSelect);
 

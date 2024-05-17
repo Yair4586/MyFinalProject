@@ -34,7 +34,7 @@ namespace MyFinalProject
                 }
                 else
                 {
-                    Session["uName"] = "מנהל";
+                    Session["fName"] = "מנהל";
                     Session["admin"] = "yes";
                     Response.Redirect("Final.aspx");
                 }

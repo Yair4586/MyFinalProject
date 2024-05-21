@@ -158,12 +158,8 @@
             else
                 document.getElementById("mPW").style.display = "none";
 
-            if (isPassword(password, passwordChk)) {
-                msg = "בדיקת הסיסמא חייבת להיות זהה לסיסמא המקורית";
-            }
 
-
-            if (msg != "") {
+            if (password != passwordChk) {
 
                 document.getElementById("mPWChk").value = msg;
                 document.getElementById("mPWChk").style.display = "inline";
@@ -284,22 +280,6 @@
 
                 }
                 i++;
-            }
-            return false;
-        }
-        function isPassword(password, passwordChk) {
-            var i = 0;
-            var len = password.length;
-            var len2 = passwordChk.length;
-            if (len != len2) {
-                return true;
-            }
-            while (i < len) {
-                if (password.charAt(i) != passwordChk.charAt(i)) {
-                    return true;
-                }
-                i++
-
             }
             return false;
         }

@@ -49,7 +49,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-            <h1 class="Header">the war effect on nearby people</h1>
+            <h1 class="Header">the war's effect in Gaza Envelope</h1>
 
     <hr />
 <br />

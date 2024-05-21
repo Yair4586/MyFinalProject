@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlTypes;
 
 namespace MyFinalProject
 {
+    
     public partial class Form_Signup : System.Web.UI.Page
     {
         public string st = "";
@@ -15,6 +17,7 @@ namespace MyFinalProject
         public string sqlSelect = "";
         public string msg = "";
         public string sqlInsert = "";
+        public string sqlStr = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             string fileName = "usersDB.mdf";
@@ -35,11 +38,6 @@ namespace MyFinalProject
 
             if (Request.Form["submit"] != null)
             {
-
-
-                st += "<table dir = 'ltr' border = '1'>";
-                st += "<tr><th colspan='2'>הפרטים שהתקבלו</th></tr>";
-
                 string uName = Request.Form["uName"];
                 string fName = Request.Form["fName"];
                 string lName = Request.Form["lName"];
@@ -71,24 +69,9 @@ namespace MyFinalProject
 
                 }
 
-                sqlSelect = "SELECT * FROM " + tableName + " WHERE uName= '" + uName + "'";
-
-                if (Helper.IsExist(fileName, sqlSelect))
-                {
-                    msg = "user name has been taken";
-                }
-                else
-                {
-                    sqlInsert = "INSERT INTO " + tableName;
-                    sqlInsert += " VALUES ('" + uName + "' , N'" + fName + "' ,N'" + lName + "' , '";
-                    sqlInsert += email + "' , " + yearBorn + " , '";
-                    sqlInsert += gender + "' , '" + prefix + "' , '" + phone + "' , '" + city + "' , '" + hob1 + "' , '";
-                    sqlInsert += hob2 + "' , '" + hob3 + "' , '" + hob4 + "' , '" + hob5 + "' , '" + password + "')";
-
-                    Helper.DoQuery(fileName, sqlInsert);
-                    msg = "sucsess";
-                    Response.Redirect("Final.aspx");
-
+                /*
+                 st += "<table dir = 'ltr' border = '1'>";
+                    st += "<tr><th colspan='2'>הפרטים שהתקבלו</th></tr>";
                     st += "<tr><td>user name: </td><td>" + uName + "</td></tr>";
                     st += "<tr><td>first name: </td><td>" + fName + "</td></tr>";
                     st += "<tr><td>last name: </td><td>" + lName + "</td></tr>";
@@ -114,6 +97,31 @@ namespace MyFinalProject
                     st += "</td></tr>";
 
                     st += "</table>";
+                 
+                */
+
+                sqlSelect = "SELECT * FROM " + tableName + " WHERE uName= '" + uName + "'";
+                sqlStr = sqlSelect;
+
+                if (Helper.IsExist(fileName, sqlSelect))
+                {
+                    msg = "user name has been taken";
+                }
+                else
+                {
+                    sqlInsert = "INSERT INTO " + tableName;
+                    sqlInsert += " VALUES ('" + uName + "' , N'" + fName + "' ,N'" + lName + "' , '";
+                    sqlInsert += email + "' , " + yearBorn + " , '";
+                    sqlInsert += gender + "' , '" + prefix + "' , '" + phone + "' , '" + city + "' , '" + hob1 + "' , '";
+                    sqlInsert += hob2 + "' , '" + hob3 + "' , '" + hob4 + "' , '" + hob5 + "' , '" + password + "')";
+
+                    sqlStr = sqlInsert;
+
+                    Helper.DoQuery(fileName, sqlInsert);
+                    msg = "sucsess";
+                 //  Response.Redirect("Final.aspx");
+
+
                 }
                 
             }

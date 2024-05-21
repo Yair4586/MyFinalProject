@@ -7,6 +7,7 @@
             var lName = document.getElementById("lName").value;
             var email = document.getElementById("email").value;
             var answer = document.getElementsByName("gender");
+            
             if (uName.length < 2) {
                 document.getElementById("mUName").value = "שם משתמש קצר מדי או לא קיים ";
                 document.getElementById("mUName").style.display = "inline";
@@ -65,7 +66,7 @@
             else if (isValidString(email)) {
                 msg = "כתובת דוא'ל לא יכולה להכיל תווים אסורים";
             }
-
+            
 
             if (msg != "") {
                 document.getElementById("mEmail").value = msg;
@@ -76,6 +77,22 @@
             else
                 document.getElementById("mEmail").style.display = "none";
 
+
+            var phoneMSG = "";
+            var phone = document.getElementById("phone").value;
+
+            if (phone.length != 7)
+                phoneMSG = "מספר טלפון חייב להכיל בדיוק 7 ספרות";
+            if (isNaN(phone))
+                phoneMSG = "מספר טלפון חייב להכיל ספרות בלבד";
+
+            if (phoneMSG != "") {
+                document.getElementById("mPhone").value = phoneMSG;
+                document.getElementById("mPhone").style.display = "inline";
+                return false;
+            }
+            else
+                document.getElementById("mPhone").style.display = "none";
 
 
             if (!answer[0].checked && !answer[1].checked) {
@@ -101,28 +118,6 @@
             else
                 document.getElementById("mCity").style.display = "none";
 
-            var yearBorn = document.getElementById("yearBorn").value;
-            var d = new Date();
-            var year = d.getFullYear();
-            if (isNaN(yearBorn))
-                msg = "שנת לידה חייבת להכיל ספרות בלבד";
-            else
-                if (yearBorn < 1900)
-                    msg = "שנת לידה חייבת להיות מספר 4 ספרתי גדול מ- 1900";
-                else
-                    if (yearBorn > year - 5)
-                        msg = "צעיר מדי מכדי להירשם לאתר";
-
-
-            if (msg != "") {
-
-                document.getElementById("mYearBorn").value = msg;
-                document.getElementById("mYearBorn").style.display = "inline";
-                return false;
-            }
-            else
-                document.getElementById("mYearBorn").style.display = "none";
-
             var password = document.getElementById("pw").value;
             var passwordChk = document.getElementById("pwChk").value;
 
@@ -147,7 +142,7 @@
             if (hasHebrew(password)) {
                 msg = "לסיסמא אסור להכיל אותיות בעברית";
             }
-
+            
 
             if (msg != "") {
 
@@ -161,14 +156,13 @@
 
             if (password != passwordChk) {
 
-                document.getElementById("mPWChk").value = msg;
+                document.getElementById("mPWChk").value = "בדיקת הסיסמה צריכה להיות דומה לסיסמה";
                 document.getElementById("mPWChk").style.display = "inline";
                 return false;
             }
             else
                 document.getElementById("mPWChk").style.display = "none";
-
-        }
+            }
         function isQuot(mail) {
             var quot = '\"', quot1 = "\'";
             if (mail.indexOf(quot) != -1 || mail.indexOf(quot1) != -1) {
@@ -416,5 +410,9 @@
         <%=st %>
     </table>
 
+
+    <h3 style="direction: ltr; text-align: center;">
+        <%=  sqlStr %>
+    </h3>
 
 </asp:Content>

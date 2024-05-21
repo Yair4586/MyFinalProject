@@ -17,7 +17,16 @@ namespace MyFinalProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string field1 = Request.Form["field1"];
+            if (Session["admin"].ToString() == "no")
+            {
+                msg = "<div style='text-HorizontalAlign: center;'>";
+                msg += "<h3>אינך מנהל, אין לך הרשאות לצפות בדף זה </h3>";
+                msg += "<a href='final.aspx'>[המשך]</a>";
+                msg += "</div>";
+            }
+            else
+            {
+                string field1 = Request.Form["field1"];
             string field2 = Request.Form["field2"];
 
             string value1 = Request.Form["value1"];
@@ -29,14 +38,8 @@ namespace MyFinalProject
             string tableName = "usersTbl";
 
             string qry1 = "", qry2 = "";
-            if (Session["admin"].ToString() == "no")
-            {
-                msg = "<div style='text-HorizontalAlign: center;'>";
-                msg += "<h3>אינך מנהל, אין לך הרשאות לצפות בדף זה </h3>";
-                msg += "<a href='final.aspx'>[המשך]</a>";
-                msg += "</div>";
-            }
-            else if (value1 != null)
+            
+            if (value1 != null)
             {
                 if (field1 == "gender" || field1 == "prefix")
                     qry1 = field1 + " = '" + value1 + "'";
@@ -63,15 +66,15 @@ namespace MyFinalProject
                 else
                     qry1 = field1 + " like N'" + value1 + "%'";
             }
-
+            
             if (value2 != null)
             {
                 if (field2 == "gender" || field2 == "prefix")
                     qry2 = field2 + " = '" + value2 + "'";
                 else if (field2 == "yearBorn")
                     qry2 = field2 + " = " + value2;
-                else if (field2 == "yearFrom")
-                    qry2 = "yearBorn" + " >= " + value2;
+                else if (field2 == "yearTo")
+                    qry2 = "yearBorn" + " <= " + value2;
                 else if (field2 == "hobby")
                 {
                     var val2 = int.Parse(value2);
@@ -92,6 +95,7 @@ namespace MyFinalProject
                     qry2 = field2 + " like N'" + value2 + "%'";
             }
 
+            
             string sqlSelect = "";
             if (qry1 != "" || qry2 != "")
             {
@@ -103,17 +107,18 @@ namespace MyFinalProject
                         sqlSelect = "SELECT * FROM " + tableName + " where (" + qry2 + ");";
                     else
                     {
-                        if(op == "and")
+                        if (op == "and")
                             sqlSelect = "SELECT * FROM " + tableName + " where (" + qry1 + " AND " + qry2 + ");";
                         else
                             sqlSelect = "SELECT * FROM " + tableName + " where (" + qry1 + " OR " + qry2 + ");";
                     }
                 }
             }
+
             sql = sqlSelect;
             if (Request.Form["submit"] != null)
             {
-                DataTable table = Helper.ExecuteDataTable(fileName, sqlSelect);
+                 DataTable table = Helper.ExecuteDataTable(fileName, sqlSelect);
 
                 int length = table.Rows.Count;
                 if (length == 0)
@@ -158,8 +163,11 @@ namespace MyFinalProject
                         st += "</tr>";
                     }
                     msg = "נרשמו:" + length + " אנשים ";
+                
                 }
             }
+            }
+
         }
     }
 }

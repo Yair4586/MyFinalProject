@@ -40,8 +40,8 @@
             }
             else {
                 if (document.getElementById("field1").value == "yearBorn" ||
-                    document.getElementById("field1").value == "yearTo") {
-                    var yearStr = "<select name='value'><option value='0'>בחר שנה</option>";
+                    document.getElementById("field1").value == "yearFrom") {
+                    var yearStr = "<select name='value1'><option value='0'>בחר שנה</option>";
                     var currYear = new Date().getFullYear();
                     var fromYear = currYear - 40;
                     var toYear = currYear - 10;
@@ -102,7 +102,7 @@
             else {
                 if (document.getElementById("field2").value == "yearBorn" ||
                     document.getElementById("field2").value == "yearTo") {
-                    var yearStr = "<select name='value'><option value='0'>בחר שנה</option>";
+                    var yearStr = "<select name='value2'><option value='0'>בחר שנה</option>";
                     var currYear = new Date().getFullYear();
                     var fromYear = currYear - 40;
                     var toYear = currYear - 10;
@@ -169,7 +169,7 @@
                         <option value="email">דוא'ל</option>
                         <option value="gender">מגדר</option>
                         <option value="yearBorn">שנת לידה</option>
-                        <option value="yearTo">עד שנה</option>
+                        <option value="yearFrom">מ שנה</option>
                         <option value="prefix">קידומת טלפון</option>
                         <option value="phone">טלפון</option>
                         <option value="hobby">תחביב</option>
